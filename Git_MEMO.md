@@ -28,6 +28,62 @@ git commit -m "Add Day009: タイトルなど"
 # 4. プッシュしてGitHubへアップ
 git push origin main
 
+# ローカル → GitHub に初回アップロードする手順
+ローカルに次のようなフォルダがあるとします（例：SleekFavorites/）：
+ステップ1：Gitの初期化（※まだしてなければ）
+cd SleekFavorites
+git init
+ステップ2：ファイルをGitに追加
+git add .
+git commit -m "Initial commit"
+ステップ3：GitHub上に空のリポジトリを作成
+GitHub上で以下のようにリポジトリを作成（例：SleekFavorites）
+作成時は「README.mdの自動追加」などをせず、完全に空の状態で作成するとスムーズです。
+ステップ4：リモートリポジトリを登録してPush
+git remote add origin https://github.com/あなたのユーザー名/SleekFavorites.git
+git branch -M main  # メインブランチ名をmainにする
+git push -u origin main
+これで、ローカル → GitHub に初回アップロード完了！ 
+② 今後の連携（commit → push）
+1.	ローカルで変更したら：
+git add .
+git commit -m "変更内容の説明"
+git push origin main
+2.	GitHubから変更を取り込むときは：
+git pull origin main
+
+# .DS_Storeをアップロードしないようにするには
+対処法：.DS_StoreをGitの追跡対象から除外する
+① .gitignore ファイルに追記（推奨）
+プロジェクトルートに .gitignore ファイルを作成または編集して、以下を追加：
+.DS_Store
+② すでにコミットされている.DS_Storeを削除
+git rm --cached .DS_Store
+git commit -m "Remove .DS_Store from tracking"
+git push
+
+# ✅ .gitignore に .DS_Store を追加する手順（VSCode編）
+🪜 ステップ①：プロジェクトのルートを開く
+	•	すでにプロジェクト（例：SleekFavorites/）をVSCodeで開いている状態でOK！
+🪜 ステップ②：.gitignore ファイルを作成（または開く）
+	•	左のエクスプローラーでルートフォルダを右クリック →
+New File（新しいファイル） → ファイル名を .gitignore として作成
+※すでに .gitignore ファイルが存在する場合は、それを開いて編集でOK
+🪜 ステップ③：以下を .gitignore に追記して保存
+# macOS 用: Finderの設定ファイル
+.DS_Store
+他にも不要なものがあれば追記できます（例：node_modules/ や dist/ など）
+🧹 ステップ④：すでにGitで追跡されている .DS_Store を除外（1回だけ必要）
+git rm --cached .DS_Store
+git commit -m "Remove .DS_Store from tracking"
+git push
+
+# ターミナルの移動方法
+cd ~/Documents/PythonApps/SleekFavorites
+ポイント：
+	•	~ を使うとホームディレクトリに一発で移動できます
+	•	スペースを含む場合は \ を使うか、"で囲む
+
 
 # Pythonを仮想環境で使う手順
 おすすめの安全な方法：仮想環境（venv）を使う
