@@ -5,6 +5,10 @@
     - git init
 - ファイルの状態を確認
     - git status
+- ファイルを登録する
+    - git add
+- コミットする
+    - git commit
 
 - Python 100Day Challenge Notes
     Day 1: 課題：四則演算プログラム
