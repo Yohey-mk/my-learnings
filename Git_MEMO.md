@@ -24,6 +24,7 @@
     Day 11: Flash Card Study App
     Day 12: 電卓付きカレンダーアプリ（CLI → GUI）
     Day 13: シンプル家計簿アプリ（CLI → GUI）
+    Day 14: シンプルメモアプリ（CLI → GUI）
 
 # Githubでの管理の仕方
 # 0. Terminalでディレクトリに移動（cd Documents/Python/100project_challenge/Dayxx）
