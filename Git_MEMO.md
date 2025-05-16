@@ -19,6 +19,11 @@
     Day 6: Rock, Paper, Scissors Game
     Day 7: FizzBuzz Game
     Day 8: タイマーアプリ（シンプルなコンソールタイマー）
+    Day 9: パスワード強度チェッカー
+    Day 10: Unit Converter単位変換アプリ
+    Day 11: Flash Card Study App
+    Day 12: 電卓付きカレンダーアプリ（CLI → GUI）
+    Day 13: シンプル家計簿アプリ（CLI → GUI）
 
 # Githubでの管理の仕方
 # 0. Terminalでディレクトリに移動（cd Documents/Python/100project_challenge/Dayxx）
